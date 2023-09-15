@@ -7,11 +7,12 @@ export class MyAccountPage {
   }
 
   //Page elements
+  readonly myAccountPageTitleLocator = this.page.locator("//title");
   readonly myAccountHeaderLocator = this.page.locator(
     `//h1[contains(text(),"My account")]`
   );
   readonly usernameGreetingsLocator = this.page
-    .locator(`//p/strong[contains(text(),${this.username})]`)
+    .locator(`//p/strong[contains(text(),"${this.username}")]`)
     .first();
   readonly notUserLocator = this.page
     .locator(`//p/strong[contains(text(),${this.username})]`)
