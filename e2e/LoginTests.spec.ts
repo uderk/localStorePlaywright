@@ -1,6 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import { LoginPage } from "../PageObjects/LoginPage";
 import { MyAccountPage } from "../PageObjects/MyAccountPage";
+import { BasePage } from "../PageObjects/BasePage";
 
 test.describe("Testing the login page", async () => {
   let loginPage: LoginPage;
