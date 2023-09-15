@@ -1,12 +1,13 @@
 import { expect, Locator, Page } from "@playwright/test";
+import { BasePage } from "./BasePage";
 
-export class LoginPage {
+export class LoginPage extends BasePage {
   constructor(
     readonly page: Page,
     readonly username: string,
     readonly password: string
   ) {
-    this.page = page;
+    super(page);
     this.username = username;
     this.password = password;
   }
